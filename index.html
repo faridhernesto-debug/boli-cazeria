@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Persecución</title>
+
+    <link
+        rel="stylesheet"
+        href="estilos.css"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- ================= INICIO ================= -->
+
+    <section id="pantallaInicio">
+
+        <img
+            src="empresa.jpeg"
+            alt="GOCHISOFT"
+            class="logo-gochisoft"
+        >
+
+        <div class="logoPixel">
+            PIXEL GAME
+        </div>
+
+        <h1>
+            ⚡ BOLI CAZERIA ⚡
+        </h1>
+
+        <p class="subtitulo">
+            JUEGO DE PERSECUCIÓN PARA 2 JUGADORES
+        </p>
+
+        <h2>
+            CONFIGURACIÓN
+        </h2>
+
+        <div class="configuracion">
+
+            <div class="jugadorConfig">
+
+                <h3>
+                    PLAYER 1
+                </h3>
+
+                <input
+                    type="text"
+                    id="nombre1"
+                    placeholder="Nombre"
+                    maxlength="15"
+                >
+
+                <label>
+                    COLOR
+                </label>
+
+                <input
+                    type="color"
+                    id="color1"
+                    value="#00ff55"
+                >
+
+            </div>
+
+
+            <div class="jugadorConfig">
+
+                <h3>
+                    PLAYER 2
+                </h3>
+
+                <input
+                    type="text"
+                    id="nombre2"
+                    placeholder="Nombre"
+                    maxlength="15"
+                >
+
+                <label>
+                    COLOR
+                </label>
+
+                <input
+                    type="color"
+                    id="color2"
+                    value="#ff3333"
+                >
+
+            </div>
+
+        </div>
+
+
+        <button onclick="comenzarPartida()">
+            ▶ START GAME
+        </button>
+
+
+        <!-- ================= CONTACTOS ================= -->
+
+        <div class="contactos">
+
+            <h2>
+                CONTACTOS
+            </h2>
+
+            <p>
+                Síguenos en nuestras redes sociales
+            </p>
+
+            <div class="redes">
+
+                <a
+                    href="https://www.instagram.com/softubi_games?stkn=MWQyYjJsOW5wYWIydA=="
+                    target="_blank"
+                >
+                    📸 Instagram
+                </a>
+
+                <a
+                    href="https://www.tiktok.com/@softubigames?_r=1&_t=ZT-9AAkyaCgS2n"
+                    target="_blank"
+                >
+                    🎵 TikTok
+                </a>
+
+            </div>
+
+            <p class="copyright">
+                © 2026 Tu empresa de videojuegos
+            </p>
+
+        </div>
+
+        <p id="error"></p>
+
+    </section>
+
+
+
+    <!-- ================= JUEGO ================= -->
+
+    <section id="pantallaJuego">
+
+        <div class="barraJuego">
+
+            <div>
+
+                <span id="nombreJuego1">
+                    PLAYER 1
+                </span>
+
+                :
+
+                <b id="puntos1">
+                    0
+                </b>
+
+            </div>
+
+
+            <div>
+
+                ROUND
+
+                <b id="ronda">
+                    1
+                </b>
+
+                /3
+
+            </div>
+
+
+            <div>
+
+                <span id="nombreJuego2">
+                    PLAYER 2
+                </span>
+
+                :
+
+                <b id="puntos2">
+                    0
+                </b>
+
+            </div>
+
+
+            <div>
+
+                TIME
+
+                <b id="tiempo">
+                    60
+                </b>
+
+            </div>
+
+        </div>
+
+
+        <div id="roles"></div>
+
+
+        <div id="mapa">
+            🏙️ LABERINTO PIXEL
+        </div>
+
+
+        <div id="contenedor">
+
+            <div id="arena">
+
+                <div id="figuras"></div>
+
+                <div id="jugador1">
+                    ●
+                </div>
+
+                <div id="jugador2">
+                    ●
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="mensaje">
+            PREPARANDO PARTIDA...
+        </div>
+
+
+        <div class="controlesJuego">
+
+            <span>
+
+                🟢
+
+                <b id="control1">
+                    PLAYER 1
+                </b>
+
+                :
+
+                W A S D
+
+            </span>
+
+
+            <span>
+
+                🔴
+
+                <b id="control2">
+                    PLAYER 2
+                </b>
+
+                :
+
+                FLECHAS
+
+            </span>
+
+
+            <span>
+                💨 CORREDOR: SHIFT
+            </span>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= FINAL ================= -->
+
+    <section id="pantallaFinal">
+
+        <div class="trofeoPixel">
+            🏆
+        </div>
+
+        <h1>
+            GAME OVER
+        </h1>
+
+        <div id="resultado"></div>
+
+        <button onclick="volverInicio()">
+            🔄 PLAY AGAIN
+        </button>
+
+    </section>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

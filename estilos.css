@@ -1,0 +1,824 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    background: #080808;
+
+    color: white;
+
+    font-family: "Courier New", monospace;
+
+    text-align: center;
+
+    image-rendering: pixelated;
+}
+
+
+/* ================= INICIO ================= */
+
+#pantallaInicio {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+
+        linear-gradient(
+            #080808 2px,
+            transparent 2px
+        ),
+
+        linear-gradient(
+            90deg,
+            #080808 2px,
+            #101010 2px
+        );
+
+    background-size: 8px 8px;
+}
+
+
+/* ================= LOGO ================= */
+
+.logo-gochisoft {
+
+    position: absolute;
+
+    top: 12px;
+
+    left: 12px;
+
+    width: 100px;
+
+    height: 100px;
+
+    object-fit: contain;
+
+    background: white;
+
+    border-radius: 10px;
+
+    z-index: 100;
+
+    box-shadow:
+        0 0 10px rgba(255,255,255,.3);
+}
+
+
+.logoPixel {
+
+    background: #00ff55;
+
+    color: #000;
+
+    padding: 8px 15px;
+
+    font-weight: bold;
+
+    font-size: 18px;
+
+    border: 4px solid white;
+
+    box-shadow: 6px 6px 0 #555;
+
+    margin-bottom: 15px;
+}
+
+
+#pantallaInicio h1 {
+
+    font-size: 38px;
+
+    margin: 10px 0;
+
+    letter-spacing: 3px;
+
+    text-shadow: 4px 4px 0 #333;
+}
+
+
+.subtitulo {
+
+    color: #00ff55;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+    margin-bottom: 30px;
+}
+
+
+#pantallaInicio h2 {
+
+    font-size: 20px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================= CONFIGURACIÓN ================= */
+
+.configuracion {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 25px;
+}
+
+
+.jugadorConfig {
+
+    width: 280px;
+
+    padding: 22px;
+
+    background: #151515;
+
+    border: 4px solid #555;
+
+    box-shadow: 6px 6px 0 #000;
+}
+
+
+.jugadorConfig h3 {
+
+    font-size: 22px;
+
+    margin-top: 0;
+
+    letter-spacing: 2px;
+}
+
+
+.jugadorConfig input[type="text"] {
+
+    width: 100%;
+
+    padding: 12px;
+
+    background: #050505;
+
+    color: white;
+
+    border: 3px solid #777;
+
+    outline: none;
+
+    font-family: "Courier New", monospace;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+}
+
+
+.jugadorConfig input[type="text"]:focus {
+
+    border-color: #00ff55;
+}
+
+
+.jugadorConfig label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    font-size: 13px;
+}
+
+
+.jugadorConfig input[type="color"] {
+
+    width: 70px;
+
+    height: 45px;
+
+    border: 4px solid white;
+
+    background: #000;
+
+    cursor: pointer;
+}
+
+
+/* ================= BOTONES ================= */
+
+button {
+
+    padding: 15px 30px;
+
+    border: 4px solid white;
+
+    border-radius: 0;
+
+    background: #00a83a;
+
+    color: white;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 6px 6px 0 #003d16;
+}
+
+
+button:hover {
+
+    background: #00ff55;
+
+    color: black;
+
+    transform: translate(3px, 3px);
+
+    box-shadow: 3px 3px 0 #003d16;
+}
+
+
+#error {
+
+    color: #ff3333;
+
+    font-weight: bold;
+
+    min-height: 20px;
+
+    font-size: 14px;
+}
+
+
+/* ================= CONTACTOS ================= */
+
+.contactos {
+
+    margin-top: 25px;
+
+    padding: 18px 25px;
+
+    background: #151515;
+
+    border: 2px solid #333;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    width: 360px;
+
+    max-width: 90%;
+}
+
+
+.contactos h2 {
+
+    font-size: 20px;
+
+    color: white;
+
+    margin-bottom: 8px;
+}
+
+
+.contactos p {
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+}
+
+
+.redes {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+.redes a {
+
+    padding: 9px 15px;
+
+    background: #222;
+
+    color: white;
+
+    text-decoration: none;
+
+    border: 2px solid #444;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: .2s;
+}
+
+
+.redes a:hover {
+
+    background: #00c853;
+
+    border-color: #00c853;
+
+    transform: scale(1.05);
+}
+
+
+.contactos .copyright {
+
+    margin-top: 15px;
+
+    margin-bottom: 0;
+
+    font-size: 11px;
+
+    color: #666;
+}
+
+
+/* ================= JUEGO ================= */
+
+#pantallaJuego {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 10px;
+
+    background: #050505;
+}
+
+
+.barraJuego {
+
+    width: 900px;
+
+    max-width: 100%;
+
+    margin: auto;
+
+    padding: 12px;
+
+    background: #111;
+
+    border: 4px solid white;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    font-size: 14px;
+
+    box-shadow: 5px 5px 0 #000;
+}
+
+
+.barraJuego b {
+
+    color: #00ff55;
+
+    font-size: 17px;
+}
+
+
+#roles {
+
+    margin: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+#mapa {
+
+    display: inline-block;
+
+    background: #151515;
+
+    border: 3px solid white;
+
+    padding: 7px 20px;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    font-size: 13px;
+}
+
+
+/* ================= MAPA ================= */
+
+#contenedor {
+
+    width: 900px;
+
+    max-width: 100%;
+
+    height: 550px;
+
+    margin: auto;
+
+    overflow: hidden;
+
+    border: 5px solid white;
+
+    background: #111;
+}
+
+
+#arena {
+
+    width: 900px;
+
+    height: 550px;
+
+    position: relative;
+
+    background: #263b2b;
+
+    overflow: hidden;
+
+    border: 4px solid #000;
+}
+
+
+/* ================= OBSTÁCULOS ================= */
+
+#figuras {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 10;
+
+    pointer-events: none;
+}
+
+
+.figura {
+
+    position: absolute;
+
+    pointer-events: none;
+
+    image-rendering: pixelated;
+
+    background: #555;
+
+    border: 4px solid #999;
+
+    box-shadow: 4px 4px 0 #111;
+}
+
+
+.cuadrado {
+
+    background: #555;
+}
+
+
+.rectangulo {
+
+    background: #4a4a4a;
+}
+
+
+.rombo {
+
+    background: #666;
+
+    transform: rotate(45deg);
+
+    border: 4px solid #aaa;
+}
+
+
+.linea {
+
+    height: 10px !important;
+
+    background: #aaa;
+
+    border: 0;
+
+    box-shadow: none;
+}
+
+
+.lineaVertical {
+
+    width: 10px !important;
+
+    background: #aaa;
+
+    border: 0;
+
+    box-shadow: none;
+}
+
+
+/* ================= JUGADORES ================= */
+
+#jugador1,
+#jugador2 {
+
+    width: 24px;
+
+    height: 24px;
+
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 24px;
+
+    line-height: 24px;
+
+    z-index: 20;
+
+    user-select: none;
+
+    text-shadow: 2px 2px 0 #000;
+
+    image-rendering: pixelated;
+}
+
+
+#jugador1 {
+
+    left: 25px;
+
+    top: 25px;
+}
+
+
+#jugador2 {
+
+    left: 850px;
+
+    top: 500px;
+}
+
+
+/* ================= CUCHILLO DEL PERSEGUIDOR ================= */
+
+.asesino {
+
+    font-size: 24px !important;
+
+    filter: drop-shadow(2px 2px 0 #000);
+
+    z-index: 30 !important;
+
+}
+
+
+/* ================= EFECTO DASH ================= */
+
+.dashActivo {
+
+    transform: scale(1.35);
+
+    filter: drop-shadow(0 0 8px white);
+}
+
+
+/* ================= EFECTO PIXEL ================= */
+
+#arena::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 50;
+
+    background:
+
+        linear-gradient(
+            rgba(255,255,255,0.025) 50%,
+            transparent 50%
+        );
+
+    background-size: 100% 6px;
+}
+
+
+/* ================= MENSAJE ================= */
+
+#mensaje {
+
+    min-height: 28px;
+
+    margin: 7px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.controlesJuego {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    color: #aaa;
+}
+
+
+/* ================= FINAL ================= */
+
+#pantallaFinal {
+
+    display: none;
+
+    min-height: 100vh;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+
+        linear-gradient(
+            #080808 2px,
+            transparent 2px
+        ),
+
+        linear-gradient(
+            90deg,
+            #080808 2px,
+            #101010 2px
+        );
+
+    background-size: 8px 8px;
+}
+
+
+.trofeoPixel {
+
+    font-size: 70px;
+
+    margin-bottom: 10px;
+
+    text-shadow: 5px 5px 0 #333;
+}
+
+
+#pantallaFinal h1 {
+
+    font-size: 42px;
+
+    letter-spacing: 4px;
+
+    text-shadow: 5px 5px 0 #333;
+}
+
+
+#resultado {
+
+    font-size: 24px;
+
+    margin: 25px;
+
+    font-weight: bold;
+
+    line-height: 1.8;
+}
+
+
+/* ================= CELULAR ================= */
+
+@media (max-width: 700px) {
+
+    #pantallaInicio h1 {
+
+        font-size: 25px;
+    }
+
+
+    .jugadorConfig {
+
+        width: 90%;
+    }
+
+
+    #contenedor {
+
+        transform-origin: top center;
+
+        transform:
+            scale(
+                calc(100vw / 910)
+            );
+
+        margin-bottom:
+            calc(
+                -550px +
+                (550px * (100vw / 910))
+            );
+    }
+
+
+    .barraJuego {
+
+        font-size: 11px;
+    }
+
+
+    #roles {
+
+        font-size: 12px;
+    }
+
+
+    #pantallaFinal h1 {
+
+        font-size: 30px;
+    }
+
+
+    .contactos {
+
+        width: 90%;
+
+        padding: 15px;
+    }
+
+}
